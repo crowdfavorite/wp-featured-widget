@@ -46,7 +46,7 @@ class CF_Featured_Widget extends WP_Widget {
 		echo $args['before_widget'];
 
 		if ( !empty($title) && !empty($link_url) ) {
-			echo $args['before_title'] . '<a href="">' . $title . '</a>' . $args['after_title'];
+			echo $args['before_title'] . '<a href="' . $link_url . '">' . $title . '</a>' . $args['after_title'];
 		} else if ( !empty($title) ) {
 			echo $args['before_title'] . $title . $args['after_title'];
 		}
