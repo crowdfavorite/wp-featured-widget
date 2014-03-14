@@ -40,8 +40,8 @@ class CF_Featured_Widget extends WP_Widget {
 	public function widget( $args, $instance ) {
 		$title = apply_filters( 'widget_title', $instance['title'] );
 		$description = wpautop( $instance['description'] );
-		$image_path = $instance['image_path'];
-		$link_url = $instance['link_url'];
+		$image_path = esc_attr( $instance['image_path'] );
+		$link_url = esc_url( $instance['link_url'] );
 
 		echo $args['before_widget'];
 
